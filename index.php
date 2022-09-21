@@ -115,7 +115,7 @@
                                 <td><?php echo $dato->Sexo; ?></td>
                                 <td><?php echo $dato->Area; ?></td>
                                 <td><?php echo $dato->Boletin; ?></td>
-                                <td><a class="text-success" href="editar.php?id=<?php echo $dato->id; ?>"><i class="bi bi-pencil-square"></i></a></td>
+                                <td><a class="text-success" href="edit.php?id=<?php echo $dato->id; ?>"><i class="bi bi-pencil-square"></i></a></td>
                                 <td><a onclick="return confirm('Estas seguro de eliminar?');" class="text-danger" href="delete.php?id=<?php echo $dato->id; ?>"><i class="bi bi-trash"></i></a></td>
                             </tr>
 
