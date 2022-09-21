@@ -3,11 +3,12 @@
 <?php
     include_once("database/connection.php");
     $query = new Connection; //SE INTANCIA LA CLASE CONECTION
-    //$query-> conectar(); //SE ACCEDE AL METODO DE LA CLASE- CONECTION
-    //$query = $mysqli->query("SELECT * FROM empleado");
+    $query-> conectar($mysqli); //SE ACCEDE AL METODO DE LA CLASE- CONECTION
+    $mysqli = ("select * from empleado");
+    //$query = $mysqli->query("select * from empleado");
     //$query = "SELECT * FROM empleado";
-    $sentencia = $mysqli->query("select * from empleado");
-    $persona = $sentencia->fetchAll(PDO::FETCH_OBJ);//
+    //$sentencia = $mysqli->query("select * from empleado");
+    //$persona = $sentencia->fetchAll(PDO::FETCH_OBJ);//
     //print_r($persona);
 ?>
 
@@ -104,23 +105,9 @@
                             }
                             ?> 
                             
+            
                             <?php 
-                                foreach($persona as $dato){ 
-                            ?>
-
-                            <tr>
-                                <td scope="row"><?php echo $dato->id; ?></td>
-                                <td><?php echo $dato->Nombre; ?></td>
-                                <td><?php echo $dato->Email; ?></td>
-                                <td><?php echo $dato->Sexo; ?></td>
-                                <td><?php echo $dato->Area; ?></td>
-                                <td><?php echo $dato->Boletin; ?></td>
-                                <td><a class="text-success" href="edit.php?id=<?php echo $dato->id; ?>"><i class="bi bi-pencil-square"></i></a></td>
-                                <td><a onclick="return confirm('Estas seguro de eliminar?');" class="text-danger" href="delete.php?id=<?php echo $dato->id; ?>"><i class="bi bi-trash"></i></a></td>
-                            </tr>
-
-                            <?php 
-                                }
+                            
                             ?>
 
                         </tbody>
